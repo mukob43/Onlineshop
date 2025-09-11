@@ -1,5 +1,4 @@
 <?php
-session_start();
 require '../config.php';
 require 'auth_admin.php'; // ตรวจสอบสิทธิ์ผู้ดูแลระบบ
 
@@ -94,7 +93,7 @@ p {
                 <a href="users.php" class="btn btn-warning w-100">จัดการสมาชิก</a>
             </div>
             <div class="col-md-4 mb-3">
-                <a href="categories.php" class="btn btn-dark w-100">จัดการหมวดหมู่</a>
+                <a href="category.php" class="btn btn-dark w-100">จัดการหมวดหมู่</a>
             </div>
             <div class="col-md-4 mb-3">
                 <a href="products.php" class="btn btn-primary w-100">จัดการสินค้า</a>

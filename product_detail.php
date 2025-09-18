@@ -22,6 +22,9 @@ if (!$product) {
 echo "<h3>ไมพ่ บสนิ คำ้ทคี่ ณุ ตอ้ งกำร</h3>";
 exit;
 }
+$img = !empty($product['image'])
+? 'product_images/' . rawurlencode($product['image'])
+: 'product_images/no-image.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="th">
@@ -113,6 +116,7 @@ h1, h2, h3 {
                 <h3 class="card-title"><?= htmlspecialchars($product['product_name'])?></h3>
                 <h6 class="text-muted">หมวดหมู่: <?= htmlspecialchars($product['category_name'])?></h6>
                 <p class="card-text mt-3"></p>
+                <img src="<?= $img?>"
                 <p><strong>ราคา:</strong> <?= htmlspecialchars($product['price'])?>บาท</p>
                 <p><strong>คงเหลือ:</strong>  <?= htmlspecialchars($product['stock'])?>ชิ้น </p>
                 <?php if ($isLoggedIn): ?>
